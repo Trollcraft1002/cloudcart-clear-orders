@@ -7,7 +7,7 @@ let formattedError
 async function fulfillment(id){
 
 
-    const apiUrl = 'https://tmarketonline.bg/api/v2/order-fulfillment'
+    const apiUrl = `https://${put_site_here}/api/v2/order-fulfillment`
 
     const raw = JSON.stringify({
         "data": {
@@ -30,10 +30,6 @@ async function fulfillment(id){
         'Content-Type': 'application/vnd.api+json',
         // Add any other headers as needed
       };
-
-
-
-
 
       let retries = 5; // Number of retries
   while (retries > 0) {
@@ -69,7 +65,7 @@ async function fulfillment(id){
         }
 
         if(response.status == 500){
-         //let  errorObj = JSON.parse(response.text)
+         //let  errorObj = response.text
           
           return `${id}: 500 Internal server Error`
         }

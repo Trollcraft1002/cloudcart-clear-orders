@@ -2,9 +2,6 @@ const { setTimeout } = require('timers');
 
 require('dotenv').config()
 
-//const fetch = require('node-fetch');
-
-//process.env.API_KEY
 
 async function getSingleOrder(id) {
 
@@ -12,7 +9,7 @@ if(id == null || id == '' || id <=0){
     throw new Error('The provided ID seems to be empty.');
 }
 
-const apiUrl = `https://tmarketonline.bg/api/v2/orders/${id}`;
+const apiUrl = `https://${put_site_here}/api/v2/orders/${id}`;
 
 
 const headers = {
