@@ -9,7 +9,7 @@ if(id == null || id == '' || id <=0){
     throw new Error('The provided ID seems to be empty.');
 }
 
-const apiUrl = `https://${put_site_here}/api/v2/orders/${id}`;
+const apiUrl = `https://${process.env.STORE_URL}/api/v2/orders/${id}`;
 
 
 const headers = {

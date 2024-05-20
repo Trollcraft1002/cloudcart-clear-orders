@@ -4,7 +4,7 @@ let formattedError
 require('dotenv').config()
 
 async function finishOrder(id){
-    const apiUrl = `https://${put_site_here}/api/v2/orders/${id}`
+    const apiUrl = `https://${process.env.STORE_URL}/api/v2/orders/${id}`
 
 
     const raw = JSON.stringify({

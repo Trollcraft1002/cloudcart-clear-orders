@@ -3,7 +3,7 @@ const { setTimeout } = require('timers');
 require('dotenv').config()
 
 
-const apiUrl = `https://${put_site_here}/api/v2/orders/?filter[status]=paid&filter[start_date]=${put_start_date}&filter[end_date]=${put_end_date}&filter[status_fulfillment]=not_fulfilled&page[number]=1&page[size]=60`;
+const apiUrl = `https://${process.env.STORE_URL}/api/v2/orders/?filter[status]=paid&filter[start_date]=${process.env.START_DATE}&filter[end_date]=${process.env.END_DATE}&filter[status_fulfillment]=not_fulfilled&page[number]=1&page[size]=60`;
 
 
 async function listOrders(){

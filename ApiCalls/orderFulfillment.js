@@ -7,7 +7,7 @@ let formattedError
 async function fulfillment(id){
 
 
-    const apiUrl = `https://${put_site_here}/api/v2/order-fulfillment`
+    const apiUrl = `https://${process.env.STORE_URL}/api/v2/order-fulfillment`
 
     const raw = JSON.stringify({
         "data": {
